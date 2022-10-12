@@ -1,7 +1,16 @@
+@import url("http://fonts.cdnfonts.com/css/gotham-rounded");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 :root {
   --main-font-color: #3a3a3a;
 
-  --main-bg-color: #dceefb;
+  --light-blue-main: #eefcfd;
+  --light-blue-secon: #61deec;
+  --dark-blue: #094685;
+  --grey: #9da7c0;
+
+  /* --main-font: "Gotham Rounded", sans-serif; */
+  --main-font: "Poppins", sans-serif;
 }
 
 * {
@@ -11,7 +20,7 @@
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--main-font);
   height: 100%;
 }
 
@@ -26,7 +35,10 @@ header {
   height: 100vh;
   /* min-height: 100vh; */
   width: 100%;
-  background-color: var(--main-bg-color);
+  background-color: var(--light-blue-main);
+  /* background: url(img/svg.png); */
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .bar {
@@ -34,7 +46,7 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: var(--main-bg-color);
+  background-color: var(--light-blue-main);
 }
 .navbar {
   display: flex;
@@ -42,8 +54,8 @@ header {
   flex-wrap: wrap;
   align-items: center;
   padding-top: 2rem;
-  background-color: var(--main-bg-color);
-  background-color: red;
+  background-color: var(--light-blue-main);
+  /* background-color: red; */
   margin-bottom: 2rem;
 }
 
@@ -72,7 +84,7 @@ header {
   list-style-type: none;
   align-items: center;
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 400;
   margin-left: 15rem;
 }
 
@@ -118,14 +130,14 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: brown;
+  /* background-color: brown; */
   margin-top: 0.5rem;
 }
 
 .hero-text {
   /* align-self: flex-start; */
   padding: 2rem 5rem;
-  background-color: aqua;
+  /* background-color: aqua; */
   width: 50%;
   max-width: 100%;
 }
@@ -136,23 +148,25 @@ header {
 
 .hero-headings h3 {
   color: #ff7871;
-  font-size: 1rem;
-  font-weight: 1000;
+  font-size: 1.1rem;
+  font-weight: 400;
   letter-spacing: 0.75rem;
   word-spacing: 1rem;
   text-transform: uppercase;
   margin-bottom: 0.7rem;
+  /* text-shadow: 2px 2px #3232328a; */
 }
 
 .hero-headings h1 {
   font-size: 5rem;
   font-size: clamp(1px, 10vw, 5rem);
+  font-weight: 400;
   line-height: 4.5rem;
   line-height: clamp(0.5rem, 10vw, 5rem);
 }
 
 .hero-images {
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   gap: 3rem;
   justify-content: flex-end;
@@ -164,7 +178,7 @@ header {
 
 .header-img-container {
   width: 26rem;
-  background-color: #ff7871;
+  /* background-color: #ff7871; */
   max-width: 100%;
 }
 
@@ -181,4 +195,51 @@ header {
 
 main {
   height: 1000px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--second-bg-color);
+}
+
+.about-us {
+  display: flex;
+  justify-content: space-around;
+  background-color: #9bffd4;
+  padding: 4rem 4rem;
+  /* height: 100vh; */
+}
+
+.au-img-container {
+  width: 50%;
+}
+
+.au-img-container {
+  width: 25rem;
+  height: 25rem;
+}
+
+.about-us-img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, #00000024 0 6px 10px 0,
+    rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+}
+
+.au-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 50%;
+}
+
+.au-text h2 {
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 4rem;
+}
+
+.au-text p {
+  font-size: 1.3rem;
 }
