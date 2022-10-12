@@ -3,10 +3,14 @@
 
 :root {
   --main-font-color: #3a3a3a;
+  --second-font-color: #181818;
+  --third-font-color: #141414;
 
-  --light-blue-main: #eefcfd;
+  --light-blue-main: #cee9ff;
   --light-blue-secon: #61deec;
   --dark-blue: #094685;
+  --footer-color: #204289;
+  --btn-blue: #0086ff;
   --grey: #9da7c0;
 
   /* --main-font: "Gotham Rounded", sans-serif; */
@@ -98,7 +102,7 @@ header {
 
 .apoint-btn {
   align-items: center;
-  background-color: #9bffd4;
+  background-color: var(--btn-blue);
   border-radius: 1.5rem;
   border-style: none;
   box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
@@ -160,7 +164,7 @@ header {
 .hero-headings h1 {
   font-size: 5rem;
   font-size: clamp(1px, 10vw, 5rem);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 4.5rem;
   line-height: clamp(0.5rem, 10vw, 5rem);
 }
@@ -203,7 +207,7 @@ main {
 .about-us {
   display: flex;
   justify-content: space-around;
-  background-color: #9bffd4;
+  background-color: #fbfffd;
   padding: 4rem 4rem;
   /* height: 100vh; */
 }
