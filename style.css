@@ -1,5 +1,7 @@
 :root {
   --main-font-color: #3a3a3a;
+
+  --main-bg-color: #dceefb;
 }
 
 * {
@@ -19,23 +21,29 @@ a {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  background-color: #92b2ee;
-  position: relative;
+  /* min-height: 100vh; */
+  width: 100%;
+  background-color: var(--main-bg-color);
 }
 
 .bar {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #92b2ee;
+  background-color: var(--main-bg-color);
 }
 .navbar {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   align-items: center;
   padding-top: 2rem;
-  background-color: #92b2ee;
+  background-color: var(--main-bg-color);
+  background-color: red;
   margin-bottom: 2rem;
 }
 
@@ -78,7 +86,7 @@ header {
 
 .apoint-btn {
   align-items: center;
-  background-color: #fff;
+  background-color: #9bffd4;
   border-radius: 1.5rem;
   border-style: none;
   box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
@@ -103,19 +111,22 @@ header {
   background: #a2b8dd;
   color: #e0e4eb;
 }
+/* ---------------------------------------------------- */
 
 .hero-section {
   display: flex;
+  width: 100%;
   justify-content: space-between;
+  /* flex-wrap: wrap; */
   align-items: center;
-  /* background-color: brown; */
+  background-color: brown;
   margin-top: 0.5rem;
 }
 
 .hero-text {
   /* align-self: flex-start; */
   padding: 2rem 5rem;
-  /* background-color: aqua; */
+  background-color: aqua;
   width: 100%;
 }
 
@@ -124,7 +135,7 @@ header {
 }
 
 .hero-headings h3 {
-  color: rgb(233, 80, 24);
+  color: #ff7871;
   font-size: 1rem;
   font-weight: 1000;
   letter-spacing: 0.75rem;
@@ -138,22 +149,27 @@ header {
   line-height: 5rem;
 }
 .hero-images {
+  background-color: red;
   display: flex;
-  width: 100%;
   gap: 3rem;
   justify-content: flex-end;
   margin-right: 2rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .header-img-container {
-  display: flex;
-  width: 25vw;
+  /* width: 26rem; */
+  background-color: #ff7871;
+  max-width: 100%;
 }
 
 .header-img {
   display: inline-block;
   width: 100%;
-  height: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
     rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
