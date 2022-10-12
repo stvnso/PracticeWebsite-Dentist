@@ -117,7 +117,6 @@ header {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
   align-items: center;
   background-color: brown;
   margin-top: 0.5rem;
@@ -127,7 +126,8 @@ header {
   /* align-self: flex-start; */
   padding: 2rem 5rem;
   background-color: aqua;
-  width: 100%;
+  width: 50%;
+  max-width: 100%;
 }
 
 .hero-headings {
@@ -146,20 +146,24 @@ header {
 
 .hero-headings h1 {
   font-size: 5rem;
-  line-height: 5rem;
+  font-size: clamp(1px, 10vw, 5rem);
+  line-height: 4.5rem;
+  line-height: clamp(0.5rem, 10vw, 5rem);
 }
+
 .hero-images {
   background-color: red;
   display: flex;
   gap: 3rem;
   justify-content: flex-end;
   margin-right: 2rem;
-  width: 100%;
+  /* width: 125rem; */
+  width: 50%;
   max-width: 100%;
 }
 
 .header-img-container {
-  /* width: 26rem; */
+  width: 26rem;
   background-color: #ff7871;
   max-width: 100%;
 }
