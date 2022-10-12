@@ -1,13 +1,18 @@
 @import url("http://fonts.cdnfonts.com/css/gotham-rounded");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
 
 :root {
   --main-font-color: #3a3a3a;
   --second-font-color: #181818;
   --third-font-color: #141414;
+  --dark-blue-font-clr: #0d3656;
+  --grey-font-color: #b0b0b0;
 
   --light-blue-main: #cee9ff;
   --light-blue-secon: #61deec;
+  --bright-main: #fbfdff;
   --dark-blue: #094685;
   --footer-color: #204289;
   --btn-blue: #0086ff;
@@ -15,6 +20,9 @@
 
   /* --main-font: "Gotham Rounded", sans-serif; */
   --main-font: "Poppins", sans-serif;
+  --main-font: "Nunito", sans-serif;
+  --main-font: "Ubuntu", sans-serif;
+  --sec-font: "Poppins", sans-serif;
 }
 
 * {
@@ -111,7 +119,7 @@ header {
   color: #3c4043;
   cursor: pointer;
   /* display: inline-flex; */
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  /* font-family: "Google Sans", Roboto, Arial, sans-serif; */
   font-size: 1.2rem;
   font-weight: bold;
   /* height: 48px; */
@@ -207,7 +215,7 @@ main {
 .about-us {
   display: flex;
   justify-content: space-around;
-  background-color: #fbfffd;
+  background-color: var(--bright-main);
   padding: 4rem 4rem;
   /* height: 100vh; */
 }
@@ -240,10 +248,35 @@ main {
 
 .au-text h2 {
   font-size: 3rem;
+  font-weight: bold;
   letter-spacing: 0.3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .au-text p {
   font-size: 1.3rem;
+  color: var(--grey-font-color);
+  line-height: 2.5rem;
+  font-family: var(--sec-font);
+  margin-bottom: 2rem;
+}
+
+.btn-container {
+  /* width: 25%; */
+  /* background-color: brown; */
+}
+
+.cta-btn {
+  background-color: var(--btn-blue);
+  border-radius: 1rem;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  color: var(--bright-main);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  padding: 1.5rem 2.5rem;
 }
