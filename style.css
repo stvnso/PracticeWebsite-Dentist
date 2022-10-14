@@ -8,7 +8,7 @@
   --second-font-color: #181818;
   --third-font-color: #141414;
   --dark-blue-font-clr: #0d3656;
-  --grey-font-color: #b0b0b0;
+  --grey-font-color: #777777;
 
   --light-blue-main: #cee9ff;
   --light-blue-secon: #61deec;
@@ -153,11 +153,11 @@ header {
 }
 
 .hero-headings h1 {
-  font-size: 5rem;
-  font-size: clamp(1px, 10vw, 5rem);
+  font-size: clamp(1px, 13vw, 6rem);
   font-weight: 600;
-  line-height: 4.5rem;
-  line-height: clamp(0.5rem, 10vw, 5rem);
+  line-height: 5rem;
+  letter-spacing: -0.3rem;
+  /* background-color: rebeccapurple; */
 }
 
 .hero-images {
@@ -227,9 +227,9 @@ main {
 }
 
 .au-text h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
-  letter-spacing: 0.3rem;
+  letter-spacing: -0.2rem;
   margin-bottom: 2rem;
 }
 
