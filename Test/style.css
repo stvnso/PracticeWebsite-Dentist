@@ -22,7 +22,7 @@
   --main-font: "Poppins", sans-serif;
   --main-font: "Nunito", sans-serif;
   --main-font: "Ubuntu", sans-serif;
-  --sec-font: "Poppins", sans-serif;
+  --main-font: "Poppins", sans-serif;
 }
 
 * {
@@ -33,14 +33,11 @@
 
 html {
   font-family: var(--main-font);
-  /* height: 100%; */
   font-size: 16px;
 }
 
 body {
-  /* background-color: red; */
-  /* background-color: var(--light-blue-main); */
-  /* font-size: 20px; */
+  background-color: var(--light-blue-main);
 }
 
 a {
@@ -51,76 +48,74 @@ a {
 header {
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
-  /* height: 100vh; */
-  padding-left: 4%;
-  padding-right: 4%;
-  background-color: blueviolet;
+  height: 100vh;
+  padding: 3vw 2vw;
+  margin: auto;
+  width: clamp(98vw,50%,70vw);
+  
 }
 
 .navbar {
+  background-color: aquamarine;
   display: flex;
-  /* flex-direction: column; */
-  width: 100%;
-  /* flex-wrap: wrap; */
-  /* justify-content: space-around; */
+  flex-direction: row;
   align-items: center;
-  padding-top: 2rem;
-  background-color: var(--light-blue-main);
-  background-color: red;
-  margin-bottom: 5rem;
-  height: 40px;
+  justify-content: space-between;
+  margin-bottom: 2vh;
 }
 
 .logo {
-  /* width: 6rem; */
-  max-width: 100%;
-  max-height: 100%;
-  /* display: flex; */
+  /* background-color: #0086ff; */
+  display: flex;
+  width: clamp(1rem,3.5rem + 2vw ,8rem);
   align-items: center;
-  background-color: brown;
-  overflow: hidden;
 }
 
 .logo-img {
-  max-height: 100%;
   width: 100%;
-  max-width: fit-content;
-  object-fit: fill;
 }
 
 .logo::after {
   content: "Starosta";
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   letter-spacing: -0.1rem;
 }
 
-.nav-links {
-
-
-.nav-links li {
-  /* margin-right: 4rem; */
+.burger{
+  font-size: 1.2rem;
+  margin-right: 1rem;
 }
 
-.nav-links li:last-child {
-  margin-right: 0;
+.nav-list {
+  display: none;
+}
+
+.nav-list li {
+  font-size: 0.9rem;
+  margin-right: 5rem;
+  margin-right: min(1rem,3rem);
+  margin-right: clamp(1rem,3rem,4rem);
+  list-style-type: none;
+  font-weight: bold;
+  letter-spacing: -0.05rem;
+}
+
+.nav-list li:last-child {
+  /* margin-right: 2rem; */
 }
 
 .apoint-btn {
   background-color: var(--btn-blue);
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   border-style: none;
   box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
     rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
   cursor: pointer;
-  display: inline-block;
-  font-size: 1.3rem;
   font-weight: 600;
-  letter-spacing: 0.05rem;
-  padding: 1rem 2.5rem;
+  padding: 0.5rem 1.2rem;
 }
 
 .apoint-btn a {
@@ -131,18 +126,36 @@ header {
   background: #a2b8dd;
   color: #e0e4eb;
 }
+
+@media (min-width: 600px) {
+  .nav-list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .burger{
+    display: none;
+  }
+
+  html{
+    font-size: 22px;
+  }
+  
+}
+
 /* ---------------------------------------------------- */
 
-/* .hero-section {
+ .hero-section {
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
+  background-color: red;
 }
 
 .hero-text {
   width: 50%;
   max-width: 100%;
+  background-color: beige;
 }
 
 .hero-headings {
@@ -151,21 +164,14 @@ header {
 }
 
 .hero-headings h3 {
-  color: #ff7871;
-  font-size: 1.1rem;
-  font-weight: 400;
-  letter-spacing: 0.75rem;
-  word-spacing: 1rem;
-  text-transform: uppercase;
-  margin-bottom: 0.7rem;
+    font-size: clamp(1px,0.4rem,3vw);
+    color: coral;
+    text-transform: uppercase;
+    letter-spacing: clamp(1px,1vw,0.7rem);
 }
 
 .hero-headings h1 {
-  font-size: clamp(1px, 13vw, 6rem);
-  font-weight: 600;
-  line-height: 5rem;
-  letter-spacing: -0.3rem;
-  /* background-color: rebeccapurple; */
+ 
 }
 /* 
 .hero-images {
