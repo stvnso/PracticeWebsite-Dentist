@@ -130,7 +130,7 @@ header {
   letter-spacing: -0.05rem;
 }
 
-.apoint-btn {
+.btn-nav-apoint {
   border-style: none;
   box-shadow: var(--btn-shadow);
   cursor: pointer;
@@ -169,7 +169,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 
 .hero-text {
@@ -186,7 +186,7 @@ header {
   font-size: clamp(12px, 1vw + 1rem, 1vw);
   text-transform: uppercase;
   letter-spacing: clamp(1px, 1vw, 0.7rem);
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 0.5rem;
 }
 
@@ -215,7 +215,7 @@ header {
 
 .btn-apoint {
   display: block;
-  /* width: 100%; */
+  width: 100%;
   background-color: var(--btn-bg-color);
   color: #fff;
   border-radius: 0.7rem;
@@ -268,28 +268,95 @@ main {
 }
 
 .about-us {
-}
-
-.au-img-container {
-}
-
-.au-img-container {
-}
-
-.about-us-img {
+  padding: 0 6vw;
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
 }
 
 .au-text {
+  margin-bottom: 3rem;
+}
+
+.wda {
+  background-color: red;
+  display: inline-block;
+}
+.au-text h4 {
+  color: var(--h3-font-color);
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  font-size: clamp(12px, 1vw + 1rem, 1vw);
+  text-transform: uppercase;
+  /* letter-spacing: clamp(1px, 1vw, 0.7rem); */
+  font-weight: 800;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #efeef6;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px 0 rgb(15 12 49 / 2%), 0 5px 15px 0 rgb(93 79 255 / 12%);
+  line-height: 1.125em;
+  font-weight: 800;
+  font-size: 0.6rem;
+  margin-bottom: 1rem;
 }
 
 .au-text h2 {
+  color: var(--h1-font-color);
+  line-height: 1.5rem;
+  word-spacing: 0.2rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
 }
 
 .au-text p {
+  line-height: 1.5rem;
+  word-spacing: 0.2rem;
+  margin-bottom: 2.5rem;
 }
 
 .btn-container {
 }
 
 .cta-btn {
+  display: block;
+  /* width: 100%; */
+  background-color: var(--btn-bg-color);
+  color: #fff;
+  border-radius: 0.7rem;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  box-shadow: var(--btn-shadow);
+}
+
+.au-img-container {
+}
+
+.about-us-img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 5%;
+}
+
+@media (min-width: 700px) {
+  .about-us {
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  .au-text {
+    width: 50%;
+  }
+
+  .au-img-container {
+    width: 70%;
+    order: -1;
+  }
+
+  .about-us-img {
+    /* height: auto; */
+  }
 }
