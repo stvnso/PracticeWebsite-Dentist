@@ -4,15 +4,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
 
+/*################################################################################## */
 :root {
-  --main-font-color: #3a3a3a;
-  --main-font-color: #181443;
-  --accent-font-color: #5d4fff;
-  --second-font-color: #181818;
-  --third-font-color: #141414;
-  --dark-blue-font-clr: #0d3656;
-  --grey-font-color: #777777;
-  --second-color: #625d7e;
+  /*-------PAGE COLORS------------  */
+
+  --btn-bg-color: #5d4fff;
 
   --light-blue-main: #cee9ff;
   --light-blue-secon: #61deec;
@@ -22,13 +18,29 @@
   --btn-blue: #0086ff;
   --grey: #9da7c0;
 
-  /* --main-font: "Gotham Rounded", sans-serif; */
+  /* ---------FONT COLORS--------------- */
+
+  --main-font-color: #534f6a;
+  --h1-font-color: #181443;
+  --h3-font-color: #ff858d;
+  --heading-accent-font-color: #5d4fff;
+
+  /* -------------------------------- */
+
+  /*--------------- FONTS------------------ */
+  /* --main-font: "Gotham Rounded", sans-serif;
   --main-font: "Poppins", sans-serif;
   --main-font: "Nunito", sans-serif;
   --main-font: "Ubuntu", sans-serif;
-  --main-font: "Poppins", sans-serif;
+  --main-font: "Poppins", sans-serif; */
   --main-font: "Plus Jakarta Sans", sans-serif;
+
+  /* --------------MISC------------------ */
+
+  --btn-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
 }
+/*################################################################################## */
 
 * {
   box-sizing: border-box;
@@ -42,39 +54,36 @@ html {
 }
 
 body {
-  /* background-color: var(--light-blue-main); */
-  height: 2000px;
   font-weight: 500;
 }
 
 p {
-  color: #534f6a;
-}
-
-h1 {
   color: var(--main-font-color);
 }
 
+h1 {
+  color: var(--h1-font-color);
+}
+
 h3 {
-  color: #ff858d;
+  color: var(--h3-font-color);
 }
 
 a {
   text-decoration: none;
-  color: var(--main-font-color);
+  color: var(--h1-font-color);
 }
 
 header {
   display: flex;
   flex-direction: column;
-  height: 85vh;
   margin: auto;
 }
 
 .navbar {
-  /* background-color: aquamarine; */
   display: flex;
   padding: 1.5rem 6vw;
+  height: 12vh;
   align-items: center;
   justify-content: space-between;
   border-bottom: 3px solid #efeef6;
@@ -85,9 +94,9 @@ header {
 .logo {
   display: flex;
   width: 10vw;
-  width: clamp(20px, 1rem + 6vw, 4rem);
+  width: clamp(24px, 1rem + 6vw, 4rem);
   align-items: center;
-  max-width: 3rem;
+  max-width: 2.4rem;
 }
 
 .logo-img {
@@ -111,6 +120,7 @@ header {
 
 .nav-list {
   display: none;
+  margin-right: -2rem;
 }
 
 .nav-list li {
@@ -120,16 +130,11 @@ header {
   letter-spacing: -0.05rem;
 }
 
-.nav-list li:last-child {
-  margin-right: 2vw;
-}
-
 .apoint-btn {
   border-style: none;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
-    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-shadow: var(--btn-shadow);
   cursor: pointer;
-  background-color: #5d4fff;
+  background-color: var(--btn-bg-color);
   color: #fff;
   border-radius: 0.7rem;
   text-align: center;
@@ -162,7 +167,6 @@ header {
 
 .hero-section {
   display: flex;
-  /* justify-content: space-between; */
   flex-direction: column;
   gap: 3rem;
   margin-bottom: 3rem;
@@ -201,7 +205,7 @@ header {
 }
 
 .accent-color-heading {
-  color: var(--accent-font-color);
+  color: var(--heading-accent-font-color);
 }
 
 .cta-container {
@@ -212,43 +216,44 @@ header {
 .btn-apoint {
   display: block;
   /* width: 100%; */
-  background-color: #5d4fff;
+  background-color: var(--btn-bg-color);
   color: #fff;
   border-radius: 0.7rem;
   text-align: center;
   padding: 1rem 2rem;
   font-weight: 700;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
-    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-shadow: var(--btn-shadow);
 }
 
 .hero-images {
-  /* background-color: red; */
+  height: 100%;
+  width: 100%;
 }
 
 .header-img-container {
+  width: 100%;
   height: 100%;
-  display: flex;
 }
 
 .header-img {
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
 @media (min-width: 700px) {
+  .hero-section {
+    flex-direction: row;
+    align-items: center;
+    height: 88vh;
+  }
+
   .hero-text {
     width: 50%;
   }
 
   .cta-container {
     justify-content: flex-start;
-  }
-
-  .hero-section {
-    flex-direction: row;
-    align-items: center;
   }
 
   .hero-images {
@@ -258,7 +263,8 @@ header {
 
 /* ------------------MAIN-------------------------------- */
 main {
-  /* margin-top: 50rem; */
+  display: flex;
+  flex-direction: column;
 }
 
 .about-us {
